@@ -53,3 +53,15 @@ const images = [
 // об’єктів images
 // Усі елементи галереї додані в DOM за одну операцію додавання
 // Є мінімальне оформлення галереї флексбоксами через CSS класи
+
+const galleryElement = document.querySelector(".gallery");
+
+images.forEach((element) => {
+  const listElement = document.createElement("li");
+  const imageElement = document.createElement("img");
+
+  imageElement.src = element.url;
+  imageElement.alt = element.alt;
+  listElement.appendChild(imageElement);
+  galleryElement.append(listElement);
+});
