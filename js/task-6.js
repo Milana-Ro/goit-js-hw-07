@@ -1,8 +1,4 @@
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
+"use strict";
 
 // Напиши скрипт створення й очищення колекції елементів
 // з наступним функціоналом.
@@ -55,3 +51,9 @@ function getRandomHexColor() {
 // наступний на 10px вищий і ширший від попереднього
 // Після натискання на кнопку Destroy усі квадрати з div#boxes
 // мають видалятися
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
