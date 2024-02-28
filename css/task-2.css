@@ -14,3 +14,16 @@ ol {
   padding-left: 0;
   list-style-type: none;
 }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.gallery li {
+  width: 360px;
+  height: 300px;
+  overflow: hidden;
+}
+.gallery li img {
+  height: 100%;
+}
