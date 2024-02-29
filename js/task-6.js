@@ -8,29 +8,29 @@ function getRandomHexColor() {
 
 const controls = document.querySelector("#controls");
 const [input, createButton, destroyButton] = controls.children;
-const boxes = document.querySelector("#boxes");
+const boxesContainer = document.querySelector("#boxes");
 
-const startSize = 30;
-let currentSize = startSize;
+const START_SIZE = 30;
+const SIZE_STEP = 10;
+let currentSize = START_SIZE;
 
 const createBoxes = (amount) => {
   destroyBoxes();
-  const elementsArray = [];
+  const boxElementsList = [];
   for (let count = 1; count <= amount; count++) {
-    const sizeStep = 10;
     const randomColor = getRandomHexColor();
     const boxElement = document.createElement("div");
     boxElement.style = `width: ${currentSize}px; height: ${currentSize}px; background-color: ${randomColor}`;
-    elementsArray.push(boxElement);
-    currentSize += sizeStep;
+    boxElementsList.push(boxElement);
+    currentSize += SIZE_STEP;
   }
-  boxes.append(...elementsArray);
+  boxesContainer.append(...boxElementsList);
   input.value = "";
 };
 
 const destroyBoxes = () => {
-  boxes.innerHTML = "";
-  currentSize = startSize;
+  boxesContainer.innerHTML = "";
+  currentSize = START_SIZE;
 };
 
 createButton.addEventListener("click", () => {
@@ -38,4 +38,4 @@ createButton.addEventListener("click", () => {
     createBoxes(input.value);
   }
 });
-destroyButton.addEventListener("click", () => destroyBoxes());
+destroyButton.addEventListener("click", destroyBoxes);

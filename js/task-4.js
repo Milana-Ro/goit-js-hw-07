@@ -13,5 +13,6 @@ form.addEventListener("submit", (event) => {
   }
 
   const inputValues = { email, password };
+  console.log(inputValues);
   form.reset();
 });
