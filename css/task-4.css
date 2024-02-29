@@ -1,16 +1,48 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
+.login-form {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
 }
-
-ul,
-ol {
-  margin: 0;
-  padding-left: 0;
-  list-style-type: none;
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+.login-form input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  outline: none;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+.login-form input:focus {
+  border: 1px solid #000;
+}
+.login-form button {
+  background-color: #4e75ff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-top: 8px;
+}
+.login-form button:hover,
+.login-form button:focus {
+  background-color: #6c8cff;
 }
