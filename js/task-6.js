@@ -7,8 +7,12 @@ function getRandomHexColor() {
 }
 
 const controls = document.querySelector("#controls");
-const [input, createButton, destroyButton] = controls.children;
+const input = controls.children[0];
+const createButton = controls.children[1];
+const destroyButton = controls.children[2];
 const boxesContainer = document.querySelector("#boxes");
+
+console.log(controls);
 
 const START_SIZE = 30;
 const SIZE_STEP = 10;
